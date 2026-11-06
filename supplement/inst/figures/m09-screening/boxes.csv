@@ -1,0 +1,14 @@
+xmin,xmax,ymin,ymax,label,kind,x,y
+1.1,8.9,9.4,11,"1. Record tests 1 and 2
+for everyone",record,5,10.2
+1.1,8.9,7,8.6,"2. Are both recorded
+scores negative?",rule,5,7.8
+0.4,4.4,4.2,6.2,"Yes: stop
+retain tests 1 and 2
+Stop pattern: 1/4",stop,2.4000000000000004,5.2
+5.6,9.6,4.2,6.2,"No: give test 3
+retain all three tests",continue,7.6,5.2
+0.5,9.5,1.1,3.5,"3. Compare retained scores
+among stopped records
+Missing Y3 is still standard normal,
+given recorded scores and pattern",comparison,5,2.3

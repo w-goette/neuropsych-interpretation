@@ -1,0 +1,4 @@
+path,terminal_a1,measurements,probability_given_target,probability_given_nontarget
+positive,1,1,0.8,0.1
+negative_positive,1,2,0.16000000000000003,0.09000000000000001
+negative_negative,0,2,0.04000000000000001,0.81

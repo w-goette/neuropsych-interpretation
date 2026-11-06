@@ -1,0 +1,3 @@
+profile,conditioning_score,target_mean,target_sd,known_conditioning_count,observed_target_count,observed_full_count,target_crossing_probability
+A,50,50,8,0,1,1,0.10564977366685524
+B,35,41,8,1,1,2,0.45026177516988714

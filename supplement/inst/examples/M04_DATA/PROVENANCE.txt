@@ -1,0 +1,7 @@
+Synthetic M04 experiments; no patient data, fitted clinical rule or diagnostic cutoff.
+Known law R=(1,.6;.6,1); raw profiles (35,50),(35,35), raw means50 andSD10.
+Global/focal/opposing shifts (-1,-1),(-1,0),(-1,1); fixed alpha=.05, separate n=20 norm experiment.
+Known-zero-contrast-mean paired model N=12, uncentered scatter (12,9;9,12); proper IW teaching priors.
+Two-dimensional training effect1.25,5 per group; a separate realized training sample for the NIW posterior.
+Deterministic quadrature/root inversion; declared tolerances in code and M04_GUIDE. General unknown-mean replication pushforward/global extrema remain unevaluated.
+Functions are sourced directly; no project package installation is required.

@@ -1,0 +1,23 @@
+Package: neuropsychmethods
+Title: Reproducible Examples for Neuropsychological Test Interpretation
+Version: 0.0.1
+Authors@R: person("Project", "contributors", role = "aut")
+Description: Documented teaching examples, numerical checks and accessible
+    figures accompanying the project manuscript. Synthetic reference examples
+    illustrate computation and do not implement clinical diagnostic rules.
+License: CC BY-NC 4.0
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Imports:
+    dplyr,
+    ggplot2,
+    readr,
+    rlang,
+    tibble,
+    tidyr
+Suggests:
+    ragg,
+    systemfonts,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0

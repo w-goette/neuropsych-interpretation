@@ -1,0 +1,12 @@
+Figure ID: fig-m01-rank-flagging; target: sec-m01-flagging, M01.
+Source: existing synthetic four-score table and 5% counterexample in M01.
+Design: known score law, rank assignment, fixed cutoff, selected population mass.
+Deterministic; no seed, sample or fitted distribution. Rank units: percent; mass units: population fraction.
+Conventions: inclusive P(Y<=y), strict P(Y<y), midpoint strict + half tie mass. Cutoff includes equality.
+All four scores evaluated under every convention; selected mass summed, never equated to assigned rank.
+Bars: panel 1 heights proportional to mass; panel 3 full strip = 100% of population.
+PNG panels: 3.2 x 6.3 in, 300 dpi, ragg; composite: 9.6 x 6.3 in.
+PNG font: Arial ; PDF font: Helvetica.
+ragg is required for this entry point and already declared in Suggests.
+CSV dictionary: score = observed score; people = specified count per 100; mass = probability; *_percent = percentage ranks; selected = rank<=5; selected_mass = mass if selected, else 0; flagged_fraction = sum selected_mass.
+Tests: tests/testthat/test-m01-process-figure.R checks all-category ranks and selected masses; fraction comparison tolerance 1e-14.

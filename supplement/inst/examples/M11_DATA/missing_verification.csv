@@ -1,0 +1,4 @@
+model,missing_shape_a,missing_shape_b,verified_positive_shape,verified_negative_shape,unverified_shape,empirical_identified_lower,empirical_identified_upper,whole_set_confidence_lower,whole_set_confidence_upper,population_risk_mean,known_missing_case_probability
+uniform_missing_prior,1,1,31,51,21,0.3,0.5,0.21240642048953662,0.601678870496699,0.4029126213592233,0.5
+low_missing_prior,1,9,31,51,21,0.3,0.5,0.21240642048953662,0.601678870496699,0.32135922330097083,0.1
+uniform_after_random_retrieval,8,4,31,51,21,0.3,0.5,0.21240642048953662,0.601678870496699,0.4368932038834951,0.6666666666666666

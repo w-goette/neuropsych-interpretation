@@ -1,0 +1,30 @@
+expect_m02_rounded <- function(actual, expected) testthat::expect_lt(max(abs(actual - expected)), 5e-8)
+testthat::test_that("M02 preserves target-specific intervals and matching", {
+  ref <- m02_posterior(20,50,10); proper <- m02_posterior(20,50,10,list(m=50,kappa=5,a=3,b=200))
+  expect_m02_rounded(m02_predict(ref,35)$lower_tail,.0797920)
+  expect_m02_rounded(m02_percentile(ref,35),c(.0163435,.0698720,.1988762))
+  testthat::expect_equal(m02_percentile_cdf(ref,35,m02_percentile(ref,35)),c(.025,.5,.975),tolerance=1e-8)
+  z <- m02_cutoffs()
+  testthat::expect_equal(m02_quantile(ref,levels=.05),50+10*z[[1]],tolerance=1e-8)
+  testthat::expect_equal(m02_content_cdf(.05,z[[1]]),.95,tolerance=1e-9)
+  expect_m02_rounded(m02_content_cdf(.05,z[[2]]),.6077354)
+  testthat::expect_equal(m02_percentile(ref,50+10*z[[1]]),m02_content_quantile(c(.025,.5,.975),z[[1]]),tolerance=1e-8)
+  testthat::expect_gt(abs(m02_percentile(proper,35)[[3]]-m02_percentile(ref,35)[[3]]),.01)
+  expect_m02_rounded(m02_scale(ref),c(7.6049039,10.1789956,14.6057164))
+})
+testthat::test_that("boundary and finite-input contracts are explicit", {
+  testthat::expect_error(m02_posterior(1,0,1))
+  testthat::expect_error(m02_posterior(20,0,0))
+  testthat::expect_error(m02_percentile(m02_posterior(20,0,1),0,levels=0))
+  testthat::expect_true(is.infinite(m02_sd_moment(m02_posterior(2,0,1))))
+  testthat::expect_error(m02_regression(cbind(rep(1,5),rep(1,5)),1:5,c(1,1)))
+  testthat::expect_error(m02_regression(matrix(1,2,1),c(1,1),1))
+  testthat::expect_error(m02_percentile(m02_posterior(20,0,1),0,h=0))
+  testthat::expect_true(is.finite(m02_predict(m02_posterior(20,0,1),0,h=0)$lower_tail))
+})
+testthat::test_that("direct integral respects symmetry and native special cases", {
+  for(df in c(1,8,19.5)) {
+    testthat::expect_equal(m02_H(-2,df,1),pt(-2,df,ncp=1),tolerance=1e-8)
+    testthat::expect_equal(m02_H(-2,df,1)+m02_H(2,df,-1),1,tolerance=1e-9)
+  }
+})

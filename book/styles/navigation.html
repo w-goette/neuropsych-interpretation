@@ -1,0 +1,21 @@
+<script>
+// Text-labelled navigation links already have an accessible name. Hide only
+// their decorative Bootstrap icon, preserving names on icon-only controls.
+(function () {
+  function labelNavigationIcons() {
+    document.querySelectorAll('.navbar .nav-link').forEach(function (link) {
+      var label = link.querySelector('.menu-text');
+      if (!label || !label.textContent.trim()) return;
+      link.querySelectorAll('i.bi').forEach(function (icon) {
+        icon.setAttribute('aria-hidden', 'true');
+        icon.removeAttribute('role');
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', labelNavigationIcons, { once: true });
+  } else {
+    labelNavigationIcons();
+  }
+}());
+</script>

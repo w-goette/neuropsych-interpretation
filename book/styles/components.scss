@@ -1,0 +1,99 @@
+/*-- scss:defaults --*/
+$web-font-path: false;
+$primary: $book-brand-blue;
+$font-family-sans-serif: $book-font-body, "Helvetica Neue", Helvetica, "Liberation Sans", sans-serif;
+$font-family-monospace: $book-font-mono, Consolas, "Liberation Mono", monospace;
+$font-size-root: 18px;
+$line-height-base: 1.65;
+$headings-font-weight: 650;
+$h1-font-size: 2.15rem;
+$h2-font-size: 1.65rem;
+$h3-font-size: 1.3rem;
+$toc-font-size: 0.88rem;
+$code-block-border-left: true;
+/*-- scss:rules --*/
+main.content { overflow-wrap: break-word; }
+main.content p, main.content li { text-wrap: pretty; }
+main.content a:not(.anchorjs-link):not(.quarto-code-copy-button) {
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--book-focus);
+  outline-offset: 3px;
+}
+/* The dark navbar needs the light focus token even in light page mode. */
+.navbar a:focus-visible, .navbar button:focus-visible { outline-color: $book-focus-dark; }
+h2 { margin-top: 2.1rem; }
+h3 { margin-top: 1.65rem; }
+blockquote { border-left: 3px solid var(--book-border); padding-left: 1rem; color: inherit; }
+figcaption, .figure-caption, .table-caption { color: var(--book-muted); font-size: .92rem; line-height: 1.5; }
+/* Display math can scroll locally without shrinking mathematical text. */
+.math.display, mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding-block: .3rem; }
+/* HTML table overflow stays within the table wrapper. Do not flatten table semantics. */
+.quarto-table-container { overflow-x: auto; }
+.callout { border-radius: .3rem; margin-block: 1.4rem; }
+.callout .callout-body { font-size: 1rem; }
+.callout .callout-title-container { font-weight: 650; }
+/* Opt-in semantic containers; content and title remain essential without CSS. */
+.book-example, .book-assumptions, .book-interpretation {
+  border: 1px solid var(--book-border);
+  border-left: 4px solid var(--book-focus);
+  background: var(--book-surface);
+  border-radius: .3rem;
+  padding: 1rem 1.15rem;
+  margin-block: 1.5rem;
+}
+.book-kicker { color: var(--book-muted); font-size: .9rem; font-weight: 650; }
+.tippy-box { font-size: .92rem; line-height: 1.5; max-width: min(34rem, 92vw) !important; }
+/* R figures export on an opaque white canvas for reliable light/dark contrast. */
+.quarto-dark img[src$=".svg"], .quarto-dark img[src$=".png"] { border-radius: .2rem; }
+@media (max-width: 767.98px) {
+  h1 { font-size: 1.85rem; }
+  main.content { padding-inline: .25rem; }
+  .book-example, .book-assumptions, .book-interpretation { padding: .8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+@media print {
+  body { background: white !important; color: black !important; }
+  .book-example, .book-assumptions, .book-interpretation { break-inside: avoid; background: white; }
+}
+
+.book-process-figure { container-type: inline-size; }
+/* Opt-in process figures: keep stage text readable; stack in source order. */
+.book-process-panels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .6rem;
+  width: 100%;
+}
+.book-process-panels img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  margin: 0;
+}
+/* Keep each stage near its intended width; avoid a two-plus-one sequence. */
+@container (max-width: 36rem) {
+  .book-process-panels { grid-template-columns: 1fr; max-width: 22rem; margin-inline: auto; }
+}
+
+.book-process-panels p { margin: 0; }
+
+/* Let long previous/next labels wrap when text is enlarged. */
+.nav-page, .nav-page-previous, .nav-page-next { min-width: 0; }
+.nav-page .pagination-link { color: var(--book-muted); min-width: 0; max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+.nav-page .nav-page-text { min-width: 0; overflow-wrap: anywhere; }
+
+@media (max-width: 767.98px) {
+  nav.page-navigation { flex-direction: column; align-items: stretch; gap: 1rem; }
+  nav.page-navigation > .nav-page { width: 100%; max-width: 100%; padding-inline: 0; }
+  nav.page-navigation .pagination-link { width: 100%; }
+  nav.page-navigation .nav-page-text { flex: 1 1 auto; }
+}
+
+.nav-page .pagination-link:hover { color: var(--book-link); }

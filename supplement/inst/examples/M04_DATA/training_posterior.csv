@@ -1,0 +1,2 @@
+nu_posterior,mean1_first,scale_first,scale_second,auc_posterior_mean,auc_credible_lower,auc_posterior_median,auc_credible_upper,class1_probability,external_prevalence
+14,1.1363636363636365,9.710227272727273,9,0.7960456213975438,0.5028687684218827,0.8188790913244383,0.965791066386145,0.3923743186959068,0.2

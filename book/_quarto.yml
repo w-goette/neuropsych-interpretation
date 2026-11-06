@@ -1,0 +1,89 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Neuropsychological Test Interpretation"
+  subtitle: "An applied mathematical framework"
+  date: "2026-10-21"
+  search: true
+  reader-mode: true
+  page-navigation: true
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: "Home"
+        icon: house
+      - href: appendices/notation.md
+        text: "Notation"
+        icon: journal-text
+      - href: references.md
+        text: "References"
+        icon: book
+  sidebar:
+    style: docked
+    collapse-level: 1
+  chapters:
+    - index.qmd
+    - part: "Questions and reference inference"
+      chapters:
+        - chapters/00-interpretation.md
+        - chapters/01-one-performance.md
+        - chapters/02-finite-reference.md
+        - chapters/13-reference-curves.md
+    - part: "Correlated performances and measurement"
+      chapters:
+        - chapters/03-correlated-battery.md
+        - chapters/04-level-and-shape.md
+        - chapters/05-measurement-and-replication.md
+        - chapters/06-items-and-scoring.md
+    - part: "Norms, change, and incomplete observations"
+      chapters:
+        - chapters/07-norms-invariance-linking.md
+        - chapters/08-change.md
+        - chapters/09-administration-and-missingness.md
+    - part: "Clinical inference and design"
+      chapters:
+        - chapters/10-heterogeneity-and-robustness.md
+        - chapters/11-clinical-targets-and-decisions.md
+        - chapters/12-design-and-validation.md
+    - references.md
+  appendices:
+    - appendices/notation.md
+
+bibliography: references.bib
+lang: en
+number-sections: true
+number-depth: 2
+toc-depth: 3
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles/light.scss, styles/components.scss, styles/_tokens.scss]
+      dark: [cosmo, styles/dark.scss, styles/components.scss, styles/_tokens.scss]
+    respect-user-color-scheme: true
+    toc: true
+    toc-title: "On this page"
+    anchor-sections: true
+    link-external-icon: true
+    citations-hover: true
+    footnotes-hover: true
+    crossrefs-hover: true
+    callout-appearance: default
+    callout-icon: true
+    smooth-scroll: false
+    grid:
+      sidebar-width: 270px
+      body-width: 800px
+      margin-width: 240px
+      gutter-width: 1.5rem
+    include-after-body: styles/navigation.html
+    lightbox: true
+    code-copy: true
+    code-overflow: scroll
+    html-math-method: mathjax
+  epub:
+    toc: true
+

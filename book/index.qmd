@@ -1,0 +1,28 @@
+# About this book {.unnumbered}
+
+This book develops an applied mathematical framework for interpreting neuropsychological performances. It begins with the questions an assessment is meant to answer, then derives the statistical tools needed to address them.
+
+The same observations can be used to ask how unusual a performance is, estimate an underlying ability or state, evaluate a discrepancy, assess change, predict a clinical outcome, or choose an action. Each question has its own target and information requirements.
+
+## How the argument develops
+
+The first part distinguishes interpretation questions and introduces reference comparisons, including uncertainty from finite normative samples. The second develops correlated profiles and opens the measurement process through classical test theory, generalizability theory, factor analysis and SEM, and item response theory.
+
+The third examines norms, invariance, repeated testing, and incomplete or adaptively administered batteries. The final part considers heterogeneity, robustness, clinical targets, decisions, and design.
+
+Frequentist and Bayesian analyses are developed together. Where an exact result is available, its assumptions and conditioning will be stated. Where numerical integration, approximation, simulation, or sensitivity bounds are needed, the computation and its limits will be identified.
+
+## Reading paths
+
+For a first reading, begin with [The interpretation problem](chapters/00-interpretation.md#sec-interpretation) and continue in chapter order. For consultation, choose the question below. Chapter titles link to introductions. Use guides for consultation after reading the arguments. Check each method's observations, assumptions and conditioning before using its result.
+
+- **How unusual is a performance?** Start with [One observed performance](chapters/01-one-performance.md#sec-m01-question) ([guide](chapters/01-one-performance.md#sec-m01-summary)). For estimated norms, use [Finite reference information](chapters/02-finite-reference.md#sec-m02-question) ([guide](chapters/02-finite-reference.md#sec-m02-target-guide)); for multiple evaluation points, ties or fitted scales, use [Reference curves, tables, and transformations](chapters/13-reference-curves.md#sec-m13-question) ([reporting](chapters/13-reference-curves.md#sec-m13-reporting)). Distinguish a fixed event from a fitted rule. Reference rarity alone establishes neither latent deficit nor disease.
+- **What is the expected performance or latent attribute?** Use [Measurement and replication](chapters/05-measurement-and-replication.md#sec-m05-question) ([guide](chapters/05-measurement-and-replication.md#sec-m05-guide)) and [Items and scoring](chapters/06-items-and-scoring.md#sec-m06-question) ([guide](chapters/06-items-and-scoring.md#sec-m06-guide)). Expected scores differ from latent coordinates; a moment-based information bound is not exact score information or reliability.
+- **Is a discrepancy or profile feature unusual?** Use [A correlated battery](chapters/03-correlated-battery.md#sec-m03-question) ([guide](chapters/03-correlated-battery.md#sec-m03-guide)) for joint comparisons and [Level, shape, and information loss](chapters/04-level-and-shape.md#sec-m04-question) ([guide](chapters/04-level-and-shape.md#sec-m04-guide)) for summaries. Specify the event, direction, metric and reference law.
+- **Has the person changed?** Use [Repeated testing and change](chapters/08-change.md#sec-m08-question) ([guide](chapters/08-change.md#sec-m08-guide)). Separate raw differences, conditional retest comparisons, latent change, historical baselines and causal effects.
+- **What clinical outcome is supported?** Use [Clinical targets and decisions](chapters/11-clinical-targets-and-decisions.md#sec-m11-question) ([guide](chapters/11-clinical-targets-and-decisions.md#sec-m11-guide)). Diagnosis, prognosis and function need target-specific outcome and population evidence beyond reference rarity.
+- **Which action or observation is preferable?** Consult the [clinical decision guide](chapters/11-clinical-targets-and-decisions.md#sec-m11-guide) and [Design and validation](chapters/12-design-and-validation.md#sec-m12-targets) ([guide](chapters/12-design-and-validation.md#sec-m12-guide)). State consequences, identify the target, assess burden and independently validate the complete fitted procedure.
+
+Across these questions, [Norms, invariance, and linking](chapters/07-norms-invariance-linking.md#sec-m07-question) ([guide](chapters/07-norms-invariance-linking.md#sec-m07-guide)) addresses peers and scale comparability; matching ranks does not establish invariant measurement. [Administration and missingness](chapters/09-administration-and-missingness.md#sec-m09-question) ([guide](chapters/09-administration-and-missingness.md#sec-m09-guide)) addresses selection and observation history. [Heterogeneity and robustness](chapters/10-heterogeneity-and-robustness.md#sec-m10-question) ([guide](chapters/10-heterogeneity-and-robustness.md#sec-m10-guide)) examines changed assumptions; flexible fitting alone ensures neither calibration nor clinical utility.
+
+The [notation appendix](appendices/notation.md) defines the working symbols; the [references](references.md) contain the cited works.

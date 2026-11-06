@@ -1,0 +1,2 @@
+A: First score against retest score, with 50% and 95% reference ellipses. A dashed average-gain line and solid conditional-expectation line pass above the case (35,36). At first score 35 the conditional mean is 40; a grey bar spans its central 95% retest interval.
+B: A U-shaped curve gives the marginal difference rule's conditional null error versus fixed first score: 0.144 at 20, 0.064 at 35, 0.039 at 50. The dashed conditional innovation rule remains at 0.05.

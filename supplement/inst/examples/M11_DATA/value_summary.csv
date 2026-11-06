@@ -1,0 +1,2 @@
+current_risk,expected_terminal_one_test,gross_evsi,evpi,test_cost,net_value_one_test,policy_sensitivity,policy_false_positive,expected_measurements,policy_terminal_loss,policy_total_loss,always_two_total_loss
+0.7,0.31,0.39,0.7,0.1,0.29,0.96,0.19,1.69,0.181,0.35,0.381

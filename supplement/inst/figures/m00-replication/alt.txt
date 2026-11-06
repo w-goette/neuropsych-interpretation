@@ -1,0 +1,2 @@
+Universe 1, a supplied three-value repeat law. Possible scores 32, 35, 38, each probability 1/3, are circles on the first row. Their expected score 35 is a diamond on the second row. Observed 35 is a triangle on the third row. Its residual is 0; separate rows show equal values without jitter.
+Universe 2 on the same score axis. Possible scores 35, 38, 41, each probability 1/3. The expected score is 38, while the observed score stays 35. The observed residual is -3. Rows and marker shapes distinguish possible repeats, their average and the single observation.

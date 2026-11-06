@@ -1,0 +1,23 @@
+[
+  {
+    "file": "learned-reference.csv",
+    "key": "data",
+    "profiles": 30,
+    "status": "Synthetic teaching observations; supplied raw values, not empirical data.",
+    "sha256": "da8d73e8a96e974addf1c5ccf2bf4034d4cce2c730e9456e83e7cc065583fd73"
+  },
+  {
+    "file": "rank-training.csv",
+    "key": "training",
+    "profiles": 30,
+    "status": "Synthetic teaching observations; supplied raw values, not empirical data.",
+    "sha256": "2479d1099df62d4767c2530d074242aa42d0575edf42b1647973fe6c9665c267"
+  },
+  {
+    "file": "rank-calibration.csv",
+    "key": "calibration",
+    "profiles": 99,
+    "status": "Synthetic teaching observations; supplied raw values, not empirical data.",
+    "sha256": "bce1b253686cfa66779fdc1288f8bb18d7ccd66d7c009e2d3557359b15a9d19d"
+  }
+]

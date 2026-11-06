@@ -1,0 +1,3 @@
+measure,replication_reliability,class_mean_shift,observed_within_class_variance,auc
+X1,0.9900990099009901,0,1.01,0.5
+X2,0.5,1,2,0.691462461274013

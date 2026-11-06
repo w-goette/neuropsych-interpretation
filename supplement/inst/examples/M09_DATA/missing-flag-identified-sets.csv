@@ -1,0 +1,4 @@
+missing_low,missing_high,empirical_lower,empirical_upper,entire_set_confidence_lower,entire_set_confidence_upper,method
+0,1,0.12,0.52,0.02546539664773321,0.7220319903300536,two one-sided bounds
+0,0.2,0.12,0.2,0.019572834339756734,0.421224375297178,"two two-sided intervals, outer rectangle"
+0.8,1,0.44000000000000006,0.52,0.23480452554926845,0.7453071343629936,"two two-sided intervals, outer rectangle"

@@ -1,0 +1,26 @@
+/*-- scss:defaults --*/
+$body-bg: $book-canvas-light;
+$body-color: $book-text-light;
+$link-color: $book-link-light;
+$popover-bg: $book-canvas-light;
+$code-block-bg: $book-surface-light;
+$code-bg: $book-surface-light;
+$code-color: $book-text-light;
+$navbar-bg: $book-brand-navy;
+$navbar-fg: #ffffff;
+$sidebar-bg: $book-surface-light;
+$sidebar-fg: $book-text-light;
+$sidebar-hl: $book-link-light;
+$border-color: $book-border-light;
+$callout-color-note: $book-plot-blue;
+$callout-color-tip: $book-plot-teal;
+$callout-color-important: $book-plot-purple;
+$callout-color-caution: $book-plot-orange;
+$callout-color-warning: $book-plot-red;
+/*-- scss:rules --*/
+:root {
+  --book-muted: #{$book-muted-light};
+  --book-surface: #{$book-surface-light};
+  --book-border: #{$book-border-light};
+  --book-focus: #{$book-focus-light};
+}

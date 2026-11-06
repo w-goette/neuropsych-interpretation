@@ -1,0 +1,13 @@
+book/_book/
+book/.quarto/
+supplement/outputs/
+supplement/renv/library/
+supplement/renv/staging/
+supplement/renv/sandbox/
+.Rhistory
+.RData
+.DS_Store
+supplement/renv/cache/
+supplement/renv/state/
+supplement/renv/source/
+supplement/renv/binary/

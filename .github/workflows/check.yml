@@ -1,0 +1,80 @@
+name: Source and companion checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.6.1'
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: '1.10.18'
+      - name: Restore R environment
+        run: Rscript --vanilla supplement/restore.R
+      - name: Test and reproduce
+        run: |
+          Rscript --vanilla supplement/run_checks.R
+          Rscript --vanilla supplement/inst/examples/m00-replication.R
+          Rscript --vanilla supplement/inst/examples/m00-replication-figure.R
+          Rscript --vanilla supplement/inst/examples/m01-observed-event.R
+          Rscript --vanilla supplement/inst/examples/m01-process-figure.R
+          Rscript --vanilla supplement/inst/examples/m02-finite-reference.R
+          Rscript --vanilla supplement/inst/examples/m02-cutoff-figure.R
+          Rscript --vanilla supplement/inst/examples/m03-correlated-battery.R
+          Rscript --vanilla supplement/inst/examples/m03-conditional-figure.R
+          Rscript --vanilla supplement/inst/examples/m04-level-shape.R
+          Rscript --vanilla supplement/inst/examples/m04-level-shape-figure.R
+          Rscript --vanilla supplement/inst/examples/m05-measurement.R
+          Rscript --vanilla supplement/inst/examples/m05-interval-figure.R
+          Rscript --vanilla supplement/inst/examples/m06-items.R
+          Rscript --vanilla supplement/inst/examples/m06-items-figure.R
+          Rscript --vanilla supplement/inst/examples/m07-norms.R
+          Rscript --vanilla supplement/inst/examples/m07-norms-figure.R
+          Rscript --vanilla supplement/inst/examples/m08-change.R
+          Rscript --vanilla supplement/inst/examples/m08-change-figure.R
+          Rscript --vanilla supplement/inst/examples/m09-administration.R
+          Rscript --vanilla supplement/inst/examples/m09-screening-figure.R
+          Rscript --vanilla supplement/inst/examples/m10-robustness.R
+          Rscript --vanilla supplement/inst/examples/m10-cutoff-figure.R
+          Rscript --vanilla supplement/inst/examples/m11-clinical-targets.R
+          Rscript --vanilla supplement/inst/examples/m11-flag-figure.R
+          Rscript --vanilla supplement/inst/examples/m12-design.R
+          Rscript --vanilla supplement/inst/examples/m12-next-observation-figure.R
+          Rscript --vanilla supplement/inst/examples/m13-reference-curves.R
+          Rscript --vanilla supplement/inst/examples/m13-region-figure.R
+          python3 scripts/check_reproduction.py
+          python3 scripts/design.py --check
+      - name: Check book sources
+        id: coverage
+        run: python3 scripts/check_sources.py --require-complete-book --github-output "$GITHUB_OUTPUT"
+      - name: Render complete HTML book
+        if: steps.coverage.outputs.complete == 'true'
+        run: quarto render book --to html
+      - name: Upload HTML book for Pages
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: book/_book
+  deploy:
+    name: Publish book to GitHub Pages
+    needs: check
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Deploy book
+        id: deployment
+        uses: actions/deploy-pages@v4

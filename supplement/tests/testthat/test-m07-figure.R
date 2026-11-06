@@ -1,0 +1,15 @@
+testthat::test_that("M07 figure inputs represent the supplied laws and exact coincidence", {
+  d <- m07_figure_data()
+  testthat::expect_equal(nrow(d$density), 1601)
+  testthat::expect_equal(nrow(d$measurement), 602)
+  testthat::expect_equal(d$density$Pool, .5 * d$density$C0 + .5 * d$density$C1, tolerance = 1e-14)
+  testthat::expect_equal(d$density$Moment_normal, stats::dnorm(d$density$score, 45, sqrt(87.5)), tolerance = 1e-14)
+  testthat::expect_true(all(abs(d$measurement$report - d$measurement$h) < 1e-14))
+  g0 <- d$measurement[d$measurement$group == "Group 0", ]; g1 <- d$measurement[d$measurement$group == "Group 1", ]
+  testthat::expect_equal(g1$observed - g0$observed, rep(2, 301), tolerance = 1e-14)
+  testthat::expect_equal(g0$report, g1$report, tolerance = 1e-14)
+  testthat::expect_equal(stats::qnorm(stats::pnorm(g1$observed - 2)), g1$h, tolerance = 1e-13)
+  panels <- plot_m07_norms(d); gray <- plot_m07_norms(d, grayscale = TRUE)
+  testthat::expect_equal(length(panels), 5)
+  for (p in c(panels, gray)) testthat::expect_s3_class(p, "ggplot")
+})

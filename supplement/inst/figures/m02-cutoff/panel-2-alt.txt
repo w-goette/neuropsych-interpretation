@@ -1,0 +1,1 @@
+Mean-calibrated rule from the same 20 synthetic norm summaries, cutoff 32.3. Same density axes 0 to 0.25 and 0 to 80; dashed orange curve is broader. Mean flagged population 5.00%; 39.2% of norm studies exceed 5% content. Mean control and upper-content control answer different questions.

@@ -1,0 +1,2 @@
+mean,variance,lower,upper,confidence_lower,confidence_upper,imputed_cut_mean,imputed_cut_variance
+-0.916352820649349,0.6184739184126563,-2.498295585747311,0.5895302915670434,-Inf,0.9599639845400534,-0.5,0.5

@@ -1,0 +1,80 @@
+testthat::test_that("M06 recursion agrees with direct response enumeration for both links", {
+  for(link in c("logistic","probit")) for(h in c(-2,0,.7,2)) {
+    law<-m06_law(h,c(.7,1.2,2),c(-1,.3,1),link);total<-m06_total(h,c(.7,1.2,2),c(-1,.3,1),link)
+    testthat::expect_equal(sum(law$probability),1,tolerance=1e-13)
+    testthat::expect_equal(sum(law$derivative),0,tolerance=1e-12)
+    for(k in 0:3) {
+      testthat::expect_equal(total$probability[k+1],sum(law$probability[law$total==k]),tolerance=1e-13)
+      testthat::expect_equal(total$derivative[k+1],sum(law$derivative[law$total==k]),tolerance=1e-12)
+    }
+  }
+  x<-m06_information(0)
+  testthat::expect_equal(x$pattern_information,.669974341614026,tolerance=1e-12)
+  testthat::expect_equal(x$total_information,.61747755,tolerance=5e-9)
+  testthat::expect_equal(x$moment_bound,.59603386,tolerance=5e-9)
+  common<-m06_information(c(-2,0,2),c(1,1),c(-1,1))
+  testthat::expect_equal(common$pattern_information,common$total_information,tolerance=1e-13)
+  testthat::expect_equal(common$pattern_information,common$moment_bound,tolerance=1e-13)
+})
+testthat::test_that("M06 score-information and posterior mixtures have independent benchmarks", {
+  x<-m06_law();q<-m06_total();score<-q$derivative/q$probability
+  loss<-sum(x$probability*(x$score-score[x$total+1])^2)
+  i<-m06_information(0);testthat::expect_equal(i$pattern_information-i$total_information,loss,tolerance=1e-13)
+  p10<-m06_posterior();p01<-m06_posterior(c(0,1));pt<-m06_posterior(total=1)
+  w<-p10$summary$normalizer/(p10$summary$normalizer+p01$summary$normalizer)
+  grid<-seq(-4,4,.2)
+  testthat::expect_equal(pt$density(grid),w*p10$density(grid)+(1-w)*p01$density(grid),tolerance=1e-12)
+  testthat::expect_equal(p10$summary$mean,.066734798165279,tolerance=1e-10)
+  testthat::expect_equal(p10$summary$variance,.590571561329843,tolerance=1e-10)
+  testthat::expect_equal(p01$summary$MLE,1.230136198604455,tolerance=1e-9)
+  testthat::expect_equal(p10$summary$MLE,.333568759776733,tolerance=1e-9)
+  testthat::expect_equal(p10$cdf(p10$summary$lower),.025,tolerance=1e-9)
+  testthat::expect_true(is.infinite(m06_posterior(c(0,0))$summary$MLE))
+})
+testthat::test_that("M06 finite confidence/prediction and category boundaries are respected", {
+  ci<-dplyr::bind_rows(lapply(0:2,m06_confidence))
+  testthat::expect_equal(ci$lower[2],-3.6671,tolerance=5e-5)
+  testthat::expect_equal(ci$upper[2],3.8172,tolerance=5e-5)
+  testthat::expect_identical(ci$lower[1],-Inf);testthat::expect_identical(ci$upper[3],Inf)
+  for(h in seq(-8,8,.4)) {
+    q<-m06_total(h);coverage<-sum(q$probability*(ci$lower<=h & h<=ci$upper))
+    testthat::expect_gte(coverage, .95-1e-12)
+  }
+  pair<-m06_conditional_prediction();testthat::expect_true(all(pair$included))
+  testthat::expect_equal(min(pair$inclusive_tail),2*exp(-2)/(1+2*exp(-2)),tolerance=1e-13)
+  pred<-m06_prediction();testthat::expect_equal(sum(pred$probability),1,tolerance=1e-10)
+  testthat::expect_lt(max(abs(pred$probability-c(.414011,.070167,.377268,.138555))),6e-7)
+  cat<-m06_category();testthat::expect_equal(sum(cat$probability),1,tolerance=1e-13)
+  testthat::expect_equal(sum(cat$information_term),.7380761755247528,tolerance=1e-11)
+  floor<-m06_floor();testthat::expect_equal(floor$mean,-.916352820649,tolerance=1e-10)
+  testthat::expect_equal(floor$variance,.618473918413,tolerance=1e-9)
+  testthat::expect_equal(floor$confidence_upper,-1+qnorm(.975),tolerance=1e-13)
+})
+testthat::test_that("normal quadrature and uncertain-calibration integration expose their limits", {
+  gh<-m06_normal_quadrature(32)
+  for(k in 0:8) {
+    # Exact standard-normal even moments, independent of eigen construction.
+    expected<-if(k%%2) 0 else if(k==0) 1 else prod(seq(1,k-1,2))
+    testthat::expect_equal(sum(gh$weights*gh$nodes^k),expected,tolerance=1e-9)
+  }
+  fit<-m06_calibration(4096,1,1,32,.05)
+  testthat::expect_equal(fit$summary$variance,fit$summary$within+fit$summary$between,tolerance=1e-12)
+  testthat::expect_equal(sum(fit$future$probability),1,tolerance=1e-12)
+  testthat::expect_lt(abs(fit$summary$mean+.064),.015)
+  testthat::expect_lt(abs(fit$summary$variance-.813),.03)
+  testthat::expect_lt(abs(fit$summary$density_mass_in_grid-1),.002)
+  testthat::expect_true(fit$summary$within>0 && fit$summary$between>0)
+})
+testthat::test_that("M06 rejects scientifically incompatible or numerically saturated inputs", {
+  testthat::expect_error(m06_law(a=c(0,2)),"positive")
+  testthat::expect_error(m06_law(a=c(1,2),b=0),"equally")
+  testthat::expect_error(m06_law(1e8),"saturation")
+  testthat::expect_error(m06_patterns(17),"16")
+  testthat::expect_error(m06_kernel(0,c(1,NA)),"binary")
+  testthat::expect_error(m06_confidence(3),"attainable")
+  testthat::expect_error(m06_confidence(1,alpha=1),"error rate")
+  testthat::expect_error(m06_posterior(prior_variance=0),"positive variance")
+  testthat::expect_error(m06_category(cuts=c(-Inf,1,-1,Inf)),"Invalid")
+  testthat::expect_error(m06_calibration(points=2),"integration design")
+  testthat::expect_error(m06_normal_quadrature(1),"order")
+})

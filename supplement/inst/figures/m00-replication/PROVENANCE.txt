@@ -1,0 +1,8 @@
+Two stipulated finite repeat laws for a fixed synthetic person. No sample or fitted model.
+Universe1: 32,35,38. Universe2: 35,38,41. Each probability1/3. Observed35 fixed.
+Rows distinguish objects, not time or frequency. No jitter: expected and observed coincide in Universe1.
+PNG font: Arial
+PNG: ragg::agg_png, 5.5x3.8in, 200dpi, opaque white; grayscale counterparts.
+EPS: base postscript, Helvetica fallback, same coordinates; font metrics/timestamp can differ.
+Common score axes30..43; values/markers from geometry.csv and law/summary.csv.
+No RNG, seed, new package/extension, clinical interpretation or causal arrow.

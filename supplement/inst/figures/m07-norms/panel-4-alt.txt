@@ -1,0 +1,1 @@
+Measurement panel A. Two parallel response lines against latent h from minus 3 to 3: group 0 observed score equals h; group 1 equals h+2. At h = 0 the scores differ by 2. Solid/dashed lines distinguish groups.

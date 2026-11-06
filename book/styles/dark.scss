@@ -1,0 +1,26 @@
+/*-- scss:defaults --*/
+$body-bg: $book-canvas-dark;
+$body-color: $book-text-dark;
+$link-color: $book-link-dark;
+$popover-bg: $book-surface-dark;
+$code-block-bg: $book-surface-dark;
+$code-bg: $book-surface-dark;
+$code-color: $book-text-dark;
+$navbar-bg: $book-canvas-dark;
+$navbar-fg: $book-text-dark;
+$sidebar-bg: $book-surface-dark;
+$sidebar-fg: $book-text-dark;
+$sidebar-hl: $book-link-dark;
+$border-color: $book-border-dark;
+$callout-color-note: $book-link-dark;
+$callout-color-tip: $book-accent-teal-dark;
+$callout-color-important: $book-accent-purple-dark;
+$callout-color-caution: $book-focus-dark;
+$callout-color-warning: $book-accent-red-dark;
+/*-- scss:rules --*/
+:root {
+  --book-muted: #{$book-muted-dark};
+  --book-surface: #{$book-surface-dark};
+  --book-border: #{$book-border-dark};
+  --book-focus: #{$book-focus-dark};
+}
