@@ -1,5 +1,0 @@
-procedure,target,center,variance,lower,upper,level
-Likelihood confidence,Expected score,35,36,23.24021609275968,46.75978390724032,0.95
-Credible,Expected score,40.4,23.04,30.992172874207743,49.80782712579226,0.95
-Likelihood prediction,Next score,35,72,18.369154107803872,51.63084589219613,0.95
-Posterior predictive,Next score,40.4,59.04,25.340128527315343,55.459871472684654,0.95

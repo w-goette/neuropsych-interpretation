@@ -1,1 +1,0 @@
-Panel C. A numeric readout compares fixed and stopped pairs. Expected scatter in squared standard units is 1 versus 0.363. Scatter upper-tail flag probability is 5.00% versus 0.25%. Radius upper-tail flag probability stays 5.00%. Means and probabilities occupy separate labeled rows.

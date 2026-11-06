@@ -1,6 +1,0 @@
-Raster font: Arial
-Raster device: ragg::agg_png,200dpi,opaque shared white canvas.
-Vector: base postscript EPS with Helvetica fallback; font metrics need not match PNG.
-No simulation or random seed: analytic score-plane boundaries and law values.
-Original stable figure ID: fig-m09-selected-history. Values and experiment preserved.
-Figure-specific data/alt/caption/source mappings are retained in inst/figures/m09-screening/.

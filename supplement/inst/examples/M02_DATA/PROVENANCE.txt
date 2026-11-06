@@ -1,8 +1,0 @@
-M02 synthetic normal-reference calculations; no RNG or empirical patient data.
-Reference scores exactly50 +/- j*sqrt(190/77),j=1,...,10. Case score35.
-Proper scalar prior m50,kappa5,a3,b200. Regression design, outcomes and prior match M02.
-Source equations: normal predictive pivot; percentile noncentrality inversion; regression projection/posterior; fitted-content law; quantile parameter and scale posterior laws.
-Reference/prior labels preserve different conditioning. sampling_law_matches applies only to equivariant fitted content under the stipulated reference prior.
-Exact representations are evaluated by numerical quadrature/root finding; finite upper mixing tail1e-13, absolute integrate tolerance2e-11; bounded CDF-tail truncation <=1e-13.
-No accuracy guarantee for arbitrarily extreme floating-point tails or untested inputs. Inspect defining integrals and inversion residuals.
-No clinical validation, sample-size recommendation, same-patient retest model or diagnostic rule.

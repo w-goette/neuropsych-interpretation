@@ -1,5 +1,0 @@
-target,new_observation,starting_variance,next_variance,variance_gain
-H1,H1,0.5,0.3333333333333333,0.16666666666666666
-H1,H2,0.5,0.5,0
-H1-H2,H1,1.5,1.3333333333333333,0.16666666666666666
-H1-H2,H2,1.5,1,0.5

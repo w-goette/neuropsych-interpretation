@@ -1,4 +1,0 @@
-Figure fig-m08-two-comparisons; synthetic known same-person normal law, means (50,52), covariance [[100,80],[80,100]], case (35,36). No fitting/simulation/seed.
-Raster device: ragg::agg_png; font: Arial
-Raster: each panel 4.8 x 5.2 inches, 180 dpi (864 x 936). Vector: 9.6 x 5.2 inch EPS, Helvetica.
-No ggplot2 extension: ordinary path, line, interval and point layers express the comparison; no fitted or inferential defaults added.

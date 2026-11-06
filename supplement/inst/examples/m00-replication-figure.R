@@ -3,6 +3,8 @@ argument <- grep("^--file=", commandArgs(FALSE), value = TRUE)
 script <- sub("^--file=", "", argument[[1]])
 if (!file.exists(script)) script <- gsub("~+~", " ", script, fixed = TRUE)
 supplement_root <- dirname(dirname(dirname(normalizePath(script, mustWork = TRUE))))
+project_library <- file.path(supplement_root, "renv", "library")
+if (dir.exists(project_library)) .libPaths(c(project_library, .libPaths()))
 options(neuropsychmethods.tokens = file.path(supplement_root, "inst/style/design-tokens.csv"))
 for (file in c("book-style.R", "m00-replication.R", "m00-replication-figure.R")) {
   source(file.path(supplement_root, "R", file))

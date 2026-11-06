@@ -1,2 +1,0 @@
-intercept,slope,rss,residual_variance,leverage,posterior_intercept,posterior_slope,posterior_shape,posterior_scale,posterior_predictive_below_ten
-10,2,4,1,0.18095238095238095,10.045801526717558,1.8931297709923665,5,5.893129770992402,0.06415348990900334

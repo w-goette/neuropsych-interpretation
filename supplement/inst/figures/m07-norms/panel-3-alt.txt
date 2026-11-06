@@ -1,1 +1,0 @@
-Panel C. Dotted density for the equal-weight mixture of the two supplied groups; probability below 35 is 0.113. A long-dashed moment-matched normal has probability 0.143 at 35. Same mean and variance do not determine the percentile.

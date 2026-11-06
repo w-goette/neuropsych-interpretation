@@ -1,2 +1,0 @@
-events,exposure,posterior_mean,posterior_variance,lower,upper,confidence_lower,confidence_upper,new_completion_probability,probability_fraction_above_half
-6,8,0.8888888888888888,0.09876543209876543,0.3837591307498335,1.6025194846335975,0.167941569097815,2.0411989630428207,0.5695327899999999,0.7105684929440211

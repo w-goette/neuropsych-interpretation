@@ -1,1 +1,0 @@
-Stage 1. A known synthetic population has scores 0, 1, 2, 3 with probabilities 10%, 20%, 40%, 30%. The highlighted score-0 category contains 10 of every 100 people.

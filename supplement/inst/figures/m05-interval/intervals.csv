@@ -1,9 +1,0 @@
-procedure,target,center,variance,lower,upper,level,row,label,method,shape
-Likelihood confidence,Expected score,35,36,23.24021609275968,46.75978390724032,0.95,3,"Confidence
-expected score",Likelihood,0
-Credible,Expected score,40.4,23.04,30.992172874207743,49.80782712579226,0.95,4,"Credible
-expected score",Credible,16
-Likelihood prediction,Next score,35,72,18.369154107803872,51.63084589219613,0.95,1,"Likelihood prediction
-next score",Likelihood,0
-Posterior predictive,Next score,40.4,59.04,25.340128527315343,55.459871472684654,0.95,2,"Posterior predictive
-next score",Posterior predictive,16

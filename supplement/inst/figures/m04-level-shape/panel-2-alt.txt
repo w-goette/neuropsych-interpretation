@@ -1,1 +1,0 @@
-Panel B. The same axes and covariance show a global population mean shift to (-1, -1), along the declared diagonal. Compare the solid shifted 95% ellipse with the gray reference ellipse. Squared level displacement is 1.25 and shape noncentrality zero: only level changes.

@@ -1,5 +1,0 @@
-All inputs are synthetic chapter defaults, not patient records. Priors and conditioning are declared in M07_GUIDE.md.
-Exact finite laws, adaptive scalar quadrature, finite Gauss-Legendre quadrature and deterministic shifted-Halton integration are separately identified.
-No random generator or seed is used. Two fixed shifts and point-count refinement are diagnostics, not a rigorous integration-error bound.
-Noisy calibration readings are constructed teaching observations matching the stated sufficient summaries.
-Entry point uses the source-based companion setup.

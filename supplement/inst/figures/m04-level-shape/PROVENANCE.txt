@@ -1,7 +1,0 @@
-ID fig-m04-level-shape. No simulation,jitter,smoothing or new experiment.
-Ellipses use 400 angles and ascending eigenbasis columns (-1,1)/sqrt2 and (1,1)/sqrt2, with eigenvalues .4 and 1.6.
-Panel A shows level and shape; panels B–D show separate mean shifts. Common axes run from -4 to 4.
-Plain ggplot2 path,polygon,segment,point,text; identity data operations, no automatic statistical fit or extension. 
-All panels opaque white; shared tokens/theme, direct titles/shapes/linetypes; grayscale counterparts. PNG3.6x4.6in300dpi,ragg;EPS7.2x9.2in2x2,Helvetica fallback. Raster and vector font metrics may differ.
-Resolved PNG font: Arial ;ggplot2 4.0.3 ;ragg 1.5.2
-ellipses: population,angle radians,score1/2 standardized units,center1/2 fixed mean. steps: level/residual operation and arrow coordinates. profiles: standardized/raw coordinates. shifts: mean displacements and two noncentralities. level_lines: constant x1+x2 for the two observed profiles only.

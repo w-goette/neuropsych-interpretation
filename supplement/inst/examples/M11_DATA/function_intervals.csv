@@ -1,3 +1,0 @@
-target,frequentist_center,confidence_or_prediction_lower,confidence_or_prediction_upper,proper_posterior_center,credible_or_predictive_lower,credible_or_predictive_upper
-conditional_mean,12,10.818941955293761,13.181058044706239,11.938931297709924,10.970420981122839,12.90744161429701
-new_outcome,12,8.982791766029049,15.017208233970951,11.938931297709924,9.333279387077651,14.544583208342198

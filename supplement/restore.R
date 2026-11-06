@@ -18,4 +18,7 @@ if (!requireNamespace("renv", quietly = TRUE)) {
 if (!dir.exists(file.path(library, "renv"))) {
   stopifnot(file.copy(find.package("renv"), library, recursive = TRUE))
 }
-renv::restore(project = project, library = library, prompt = FALSE)
+renv::restore(project = project, library = library,
+              lockfile = file.path(project, "renv.lock"), prompt = FALSE)
+source(file.path(project, "check_environment.R"))
+check_companion_environment(project)

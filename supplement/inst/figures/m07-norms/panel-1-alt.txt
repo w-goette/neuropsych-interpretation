@@ -1,1 +1,0 @@
-Panel A. Reference density of observed score y for C0 peers, normal mean 50, SD 10. A solid curve and a vertical line at 35; shaded probability below 35 is 0.067.

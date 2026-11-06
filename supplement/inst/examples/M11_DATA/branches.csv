@@ -1,3 +1,0 @@
-first_result,probability,updated_target_probability,next_choice_in_two_step_policy
-positive,0.31,0.7741935483870968,stop_a1
-negative,0.69,0.08695652173913042,test_again

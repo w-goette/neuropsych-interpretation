@@ -8,10 +8,11 @@ From the repository root:
 cd supplement
 Rscript --vanilla restore.R
 cd ..
+Rscript --vanilla supplement/check_environment.R
 Rscript --vanilla supplement/run_checks.R
 ```
 
-Restoring creates a local library under `supplement/renv/`. Internet access and compatible package binaries or build tools are required. Examples source the supplied R functions directly.
+Restoring creates a local library under `supplement/renv/`. Internet access and compatible package binaries or build tools are required. Examples source the supplied R functions directly and select the local companion library in each new R session. The setup and test commands verify that every locked package is present at its recorded version and can load. They also check declared dependencies and standalone example startup code.
 
 Run the numerical and figure scripts listed in the [companion guide](README.md), then compare generated tables with the supplied teaching values:
 

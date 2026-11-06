@@ -1,1 +1,0 @@
-Panel 1 plots candidate mean against candidate SD in observed-score units. A widening coupled .95 confidence region from 20 synthetic peers has SD limits about 7.33 and 15.48. On its right boundary, circle 1 is the lower-SD candidate and triangle 2 the upper-SD candidate. These same candidates are followed in panel 2; shading is an admissible set, not a posterior density.

@@ -1,1 +1,0 @@
-Score 1 reference densities for all peers (dashed) and peers with score 2=50 (solid), on common axes with the next panel. The conditional mean is 50, SD8. Dotted cutoff at the observed 35; shaded conditional lower tail is 3.04% of this slice versus 6.68% of all peers.

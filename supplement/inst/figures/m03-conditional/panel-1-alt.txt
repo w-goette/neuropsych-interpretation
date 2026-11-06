@@ -1,1 +1,0 @@
-Joint distribution of two synthetic observed test scores: score 2 horizontal, score 1 vertical, both axes 20 to 80. Correlation 0.6 tilts 50% and 95% ellipses upward. Bars at score 2=50 and 35 have score 1 means 50 and 41, each +/-16. Circle A=(35,50) and open square B=(35,35) share score 1=35.

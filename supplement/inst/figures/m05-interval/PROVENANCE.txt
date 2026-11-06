@@ -1,5 +1,0 @@
-R calculates the stipulated scalar law, centers, endpoints, coverage functions and marked expectations. No simulation or seed. Two panels stack on narrow HTML instead of shrinking one composite. Exact.95 line coincidence intentionally retained;no jitter/smoothing/fake separation.
-intervals:procedure,target,center,variance,lower,upper,level,row,label,method,shape. coverage:tau points,procedure,coverage fraction. prior:density per score point,scaled_shape max.18 for a weighting illustration. marked:six nonconstant-curve points at20,35,50.
-Plain ggplot2 identity linerange/point/line/area/text. 
-Shared design tokens/book_theme,opaque white canvas,shape/linetype and direct-label redundancy,grayscale counterparts. Panel PNG4.6x5.4in300dpi ragg;EPS composite9.2x5.4inHelvetica. Figure text not affected by browser text scaling; native full-size images and textual table/caption provide alternatives.
-Resolved PNG font: Arial ;ggplot2 4.0.3 ;ragg 1.5.2

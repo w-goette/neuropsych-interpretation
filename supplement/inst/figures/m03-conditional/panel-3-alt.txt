@@ -1,1 +1,0 @@
-Same score 1 density axes, now conditioning on score 2=35. The solid conditional curve moves to mean 41 while its SD stays 8; dashed all-peer curve is unchanged. At the observed 35, the conditional lower tail is 22.66%, versus the unchanged marginal 6.68%.

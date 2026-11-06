@@ -1,7 +1,0 @@
-PNG font: Arial
-PNG device:ragg::agg_png; white canvas;5.5x6.1 inches,200dpi. EPS:base postscript/Helvetica fallback, opaque colors.
-Figure fig-m13-region-to-band. Synthetic normal reference: n=20, mean=50, SD=10; fixed component probabilities sqrt(.95).
-Panel1 couples candidate means/SDs. Panel2 carries two positive-boundary candidates into their normal CDFs and the full analytic envelopes.
-The two candidate curves coincide at50 exactly. Different curves attain the lower envelope on opposite sides; no jitter or altered illustration inputs.
-Blue shading is the full joint-region band, including negative-boundary extrema not individually traced. Finite20..80 score window illustrates, not proves, all-real-score coverage.
-Shared ggplot2 style; shapes, line types, and labels supplement color.

@@ -1,1 +1,0 @@
-Panel D. The same axes and covariance show an opposing population mean shift to (-1, 1), across the declared diagonal. Squared level displacement is zero and shape noncentrality 5: only shape changes. This is a known-law population comparison, not an observed diagnosis.

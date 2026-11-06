@@ -1,1 +1,0 @@
-Line chart of supplied covariance-matched Student peers. Degrees of freedom run from just above2 to200 on a log axis; probability ticks run from0 to.10. The fixed Gaussian radius cutoff flags about.075,.089,.080 and.063 at degrees3,5,10 and30. The curve peaks near5 and approaches the dashed Gaussian benchmark.05. Covariance is supplied, not estimated.

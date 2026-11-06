@@ -1,4 +1,0 @@
-target_event_probability,nontarget_event_probability,prevalence,target_given_event
-0.01,0.01,0.1,0.09999999999999998
-0.5,0.01,0.1,0.847457627118644
-0,0.01,0.1,0

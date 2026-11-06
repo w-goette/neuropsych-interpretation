@@ -1,1 +1,0 @@
-Panel B. Reference density for C1 peers, normal mean 40, SD 5. A dashed curve and the same vertical line at 35; shaded probability is 0.159. The performance stayed fixed while peers changed.

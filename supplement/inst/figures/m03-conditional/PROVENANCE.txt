@@ -1,9 +1,0 @@
-Figure ID fig-m03-conditional-slices; same source law, profiles, axes orientation and50%/95% regions as eq-m03-example-law.
-Density grid: 900 positions plus the exact score 35. Ellipses: 400 angles, fixed lower Cholesky and chi-square radii. No simulation or smoothing.
-Process: supplied law and two observed profiles -> fixed score2 slices -> conditional center/spread -> lower-tail score1 proportions. No cutoff rule or fitting experiment added.
-Two conditional comparisons each show the all-peer dashed curve and the corresponding blue conditional curve. Line types, titles, shapes, and grayscale distinguish the comparisons.
-Density y axis probability per score unit; score axes in observed units. Lower-tail readouts use full distributions; omitted plotted masses in summaries.csv.
-Plain ggplot2 geom_path/geom_line/geom_ribbon, identity statistics/position; no automatic fit. Shared tokens/theme, opaque white canvas.
-PNG each3.4x4.3in,300dpi,ragg. EPS vector composite10.2x4.3in,Helvetica fallback; font metrics need not equal raster.
-Resolved PNG font: Arial ; ggplot2 4.0.3 ; ragg 1.5.2
-Plot dictionaries: ellipses level=central probability,angle=radians,score2/score1=units; densities conditional_density/marginal_density=probability per unit; summaries conditional_sd=SD,conditional/marginal_tail=fractions,omitted_*_mass=fractions outside plotted range; slices low/high=conditional mean+/-2SD; profiles explicitly ordered(score1,score2) in labels.

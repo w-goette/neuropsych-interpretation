@@ -1,2 +1,0 @@
-score,scores_at_or_below,confidence_lower,confidence_upper,minmax_prediction_coverage,one_infinite_endpoint_coverage
-35,1,6.253713955419048e-5,0.36960847230897376,0.9047619047619048,0.9523809523809523

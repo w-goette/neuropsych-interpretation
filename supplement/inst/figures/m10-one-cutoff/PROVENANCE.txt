@@ -1,5 +1,0 @@
-PNG font: Arial
-PNG device: ragg::agg_png; 4.8 x 4.7 inches, 200 dpi
-EPS font/device: Helvetica/base postscript; matching geometry, host glyph metrics may differ
-Deterministic analytic curves; square .1346 is the manuscript's 100000-repetition synthetic shrinkage simulation (seed271004), repeated-experiment simulation, separate from the analytic curves.
-One benchmark probability .05 in each panel has a different experiment; exact coincidence is intentional, never jittered.

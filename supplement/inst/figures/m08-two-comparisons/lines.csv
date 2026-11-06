@@ -1,5 +1,0 @@
-first,retest,comparison
-15,17,First score + average gain
-85,87,First score + average gain
-15,24,Expected retest given first
-85,80,Expected retest given first

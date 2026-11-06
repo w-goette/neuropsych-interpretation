@@ -1,5 +1,0 @@
-cell,count,posterior_shape,loss,net_benefit_contribution
-true_positive,16,17,0,1
-false_positive,8,9,1,-0.25
-false_negative,4,5,4,0
-true_negative,72,73,0,0
