@@ -11,3 +11,4 @@ supplement/renv/cache/
 supplement/renv/state/
 supplement/renv/source/
 supplement/renv/binary/
+__pycache__/
