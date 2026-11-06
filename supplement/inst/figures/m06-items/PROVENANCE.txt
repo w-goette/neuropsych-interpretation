@@ -1,0 +1,6 @@
+Synthetic item model: slopes 1 and 2; difficulties 0 and 1; standard normal prior for the posterior only. Deterministic calculations; no clinical cutoff.
+Information:fixed response kernel -> finite pattern probabilities -> scoring into totals -> exact local information and moment bound;panelB divides each by full-pattern information. Posterior:pattern likelihood -> normal-prior weighting -> pattern/total-only density mixture. Mean marks and MLE triangles have different meanings.
+Near-overlap is real numerical closeness;total-only posterior is dominated by more likely pattern10. Grid resolution is.01;no jitter,smoothing or artificial curve separation. Retain separate absolute/share panels and clear line types instead of changing illustration data.
+Inputs and calculations are defined in the supplied R source using finite sums and adaptive quadrature.
+PNG uses ragg,300dpi,opaque white canvas,shared book_theme/book_tokens and resolved font below. Information panels4.6x5.4in;posterior4.6x5.4in. Color and grayscale counterparts;EPS composite masters use Helvetica fallback. 
+Resolved PNG font: Arial ;ggplot2 4.0.3 ;ragg 1.5.2

@@ -1,0 +1,3 @@
+n,probability,method
+12,0.36203378482179993,Unregularized plug-in
+12,0.1346,Shrinkage simulation

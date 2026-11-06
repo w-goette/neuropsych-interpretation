@@ -1,0 +1,29 @@
+name,value,purpose
+brand_blue,#004c97,UT Southwestern reference blue
+brand_navy,#00355d,UT Southwestern reference navy
+text_light,#23313f,Main text on light canvas
+muted_light,#52616b,Secondary text on light canvas
+canvas_light,#ffffff,Page and plot canvas
+surface_light,#f3f6f9,Code and secondary surface
+link_light,#004c97,Underlined interactive text
+border_light,#c5ced7,Nonsemantic surface boundary
+text_dark,#e6edf3,Main text on dark canvas
+muted_dark,#b9c6d2,Secondary text on dark canvas
+canvas_dark,#15212d,Dark page canvas
+surface_dark,#1e3041,Dark secondary surface
+link_dark,#8cc8ff,Underlined interactive text on dark canvas
+border_dark,#526b80,Dark surface boundary
+focus_light,#8c3b00,Keyboard focus against light canvas
+focus_dark,#ffd08a,Keyboard focus against dark canvas
+plot_blue,#004c97,First categorical series
+plot_orange,#b36127,Second categorical series
+plot_teal,#006c67,Third categorical series
+plot_purple,#69678c,Fourth categorical series
+plot_red,#b63f4a,Fifth categorical series
+plot_slate,#52616b,Sixth categorical series
+font_body,Arial,Preferred locally available sans-serif family
+font_plot,Arial,Preferred plot family with recorded system fallback
+font_mono,Menlo,Preferred code family with monospace fallback
+accent_teal_dark,#80d6c9,Dark tip marker
+accent_purple_dark,#c4b9f3,Dark important marker
+accent_red_dark,#ffa3ac,Dark warning marker

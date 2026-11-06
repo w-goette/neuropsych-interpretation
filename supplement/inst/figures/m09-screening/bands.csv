@@ -1,0 +1,5 @@
+x,y,boundary,side
+-3.6,-6.371807648699356,Scatter boundaries,-1
+3.6,0.8281923513006442,Scatter boundaries,-1
+-3.6,-0.8281923513006442,Scatter boundaries,1
+3.6,6.371807648699356,Scatter boundaries,1

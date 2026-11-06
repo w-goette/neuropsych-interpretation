@@ -1,0 +1,2 @@
+events,scheduled,exposure_person_years,horizon_years,rate_mle,risk_plugin,posterior_shape,posterior_rate_years,risk_predictive,rate_confidence_lower,rate_confidence_upper,risk_confidence_lower,risk_confidence_upper,risk_credible_lower,risk_credible_upper,count_confidence_lower,count_confidence_upper
+3,12,21,2,0.14285714285714285,0.24852270692471404,5,23,0.34091847679999987,0.009706013614867537,0.5985230741687558,0.019224827097466896,0.6979147897736311,0.1316606891373176,0.5895794561629553,0.05486064452799272,0.5718584618781891

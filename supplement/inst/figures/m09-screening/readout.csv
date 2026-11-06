@@ -1,0 +1,7 @@
+quantity,unit,fixed_pair,selected_negative_pair,pattern_probability,scatter_cutoff,radius_squared_cutoff,label,y,fixed_label,selected_label
+Expected scatter,squared standard-score units,1,0.3633802276324186,0.25,3.8414588206941263,5.99146454710798,"Expected scatter
+(squared standard units)",3,1,0.363
+Scatter upper-tail probability,probability,0.05,0.0024999999999999996,0.25,3.8414588206941263,5.99146454710798,"Scatter upper-tail rule
+(probability flagged)",1.9,5.00%,0.25%
+Radius upper-tail probability,probability,0.05,0.05,0.25,3.8414588206941263,5.99146454710798,"Radius upper-tail rule
+(probability flagged)",0.8,5.00%,5.00%

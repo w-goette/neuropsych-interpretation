@@ -1,0 +1,2 @@
+success,repeats,confidence_lower,confidence_upper,posterior_a,posterior_b,posterior_mean,credible_lower,credible_upper,population_single_reliability,average_reliability
+2,8,0.031854026249944226,0.6508557944128243,4,8,0.3333333333333333,0.10926344381909815,0.6097425595724212,0.2,0.6666666666666666

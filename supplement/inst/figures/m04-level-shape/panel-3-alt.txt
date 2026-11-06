@@ -1,0 +1,1 @@
+Panel C. The same axes and covariance show a focal population mean shift to (-1, 0). Squared level displacement is 0.3125 and shape noncentrality 1.25: both change. The solid outline is a shifted population 95% region, not a power or rejection probability.

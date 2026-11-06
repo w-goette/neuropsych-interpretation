@@ -1,0 +1,1 @@
+One population, three rank conventions, one cutoff. Assigned ranks in stage 2 differ from population fractions flagged in stage 3. Midpoint ranking does not split a tied group: all people in the category receive the same rank and decision. Synthetic known-law example; no empirical-CDF estimation or population shift.

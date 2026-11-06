@@ -1,0 +1,6 @@
+Synthetic inputs/targets preserved from existing fig-m07-three-references and fig-m07-calibrated-not-invariant. Fixed score 35; original normal laws, mixture weights and Y=H+2C model. No empirical data or estimated parameters.
+Reference process: declared peers -> true CDF at the same observed 35 -> differing tail probabilities. Calibration process: observed group-offset relation -> correct conditional CDF and inverse-normal operation -> identical normalized reports. Two panels encode different quantities, not before/after measurements.
+Panel 5 overlap is exact algebra, not insufficient grid resolution. Do not jitter, separate or smooth. Evaluation grid: scores 5 to 85 by .05 and h=-3 to 3 by .02. Every density and value is retained as CSV and checked against the original formulas.
+The two scientific diagrams retain their chapter laws, values and stable figure IDs. R source uses shared book_theme/book_tokens, explicit identity lines/ribbons and redundant linetypes. 
+PNG: ragg, 300 dpi, reference panels 3.8 by 5.1 in; calibration panels 4.6 by 5.1 in, opaque white canvas, color/grayscale. EPS composite masters: Helvetica fallback; no identical font metrics promised.
+PNG font: Arial ;ggplot2 4.0.3 ;ragg 1.5.2

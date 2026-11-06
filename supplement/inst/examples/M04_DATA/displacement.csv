@@ -1,0 +1,2 @@
+level_posterior_mean,level_posterior_sd,level_confidence_lower,level_confidence_upper,shape_confidence_lower,shape_confidence_upper,shape_posterior_mean,shape_credible_lower,shape_credible_upper
+-0.4192627457812106,0.7071067811865476,-2.798489476102475,1.1214384929776322,0,13.227871203615306,1.203125,0.002001988001422558,4.948483865736045

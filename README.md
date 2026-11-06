@@ -4,6 +4,18 @@ An applied mathematical framework for reference comparisons, measurement, change
 
 This source distribution contains all fourteen chapters in their intended order, with the source-based R companion and retained synthetic teaching data. The HTML book is the primary publication format.
 
+## Build and publish
+
+This repository is a complete source distribution. Transfer its entire contents, including hidden `.github` files. The file inventories verify that scripts, teaching data, and style resources are present and unchanged:
+
+```sh
+python3 scripts/check_sources.py --require-complete-book
+```
+
+On GitHub, select **Settings → Pages → Build and deployment → Source: GitHub Actions**. Push to the `main` branch to check the source, restore the R environment, reproduce the examples, build the HTML book, and deploy it to Pages. Pull requests run checks without deploying.
+
+For deliberate edits to the source or recorded environment, regenerate the inventories with `python3 scripts/update_manifest.py` before committing. The inventories check file integrity; they do not establish scientific validity.
+
 ## Read and reproduce the chapters
 
 [M00](book/chapters/00-interpretation.md) specifies interpretation targets, score meanings and uncertainty. Its [R guide](supplement/inst/examples/M00_GUIDE.md) and [figure guide](supplement/inst/figures/m00-replication/README.md) explain two complete finite repeat laws for one fixed synthetic person, without a norm percentile or clinical conclusion.
@@ -80,7 +92,7 @@ python3 scripts/check_sources.py
 
 Run `python3 scripts/check_sources.py --require-complete-book` to check the configured source files, then run `quarto render book --to html`; output goes to `book/_book/`. Preview locally with `quarto preview book --to html`. Quarto’s HTML uses MathJax4 and an ES6 polyfill from public CDNs, so first-time browser math rendering needs network access. Full-book HTML is the primary format.
 
-The [GitHub Actions workflow](.github/workflows/check.yml) runs the R examples, checks the teaching data and source files, and builds the HTML book.
+The [GitHub Actions workflow](.github/workflows/check.yml) runs the R examples, checks the teaching data and source files, builds the HTML book, and publishes successful builds from `main` to GitHub Pages.
 
 ## Design and reuse
 

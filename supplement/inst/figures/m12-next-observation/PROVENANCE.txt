@@ -1,0 +1,6 @@
+PNG font: Arial
+PNG: ragg::agg_png, white canvas,200dpi, separate5.5x5.4in panels.
+Vector EPS panels and composite: base postscript with Helvetica fallback; metrics may differ from PNG.
+Same independent standard-normal coordinates, initial covariance diag(1/2,1), unit-error additions and exact integer best splits k0–8.
+Overlap at k0,1,2 is exact; no jitter or altered data. Panel A y-range0–0.6 improves use of space; panel B0–1.6. Variance units unchanged.
+No new experiment, clinical target, uncertainty band or simulation.

@@ -1,0 +1,4 @@
+parameter,positive_count,sample_size,shape_a,shape_b,confidence_lower,confidence_upper
+sensitivity,16,20,17,5,0.514032968581539,0.9586294859274666
+false_positive,4,40,5,37,0.020065149060769515,0.2687204203264496
+prevalence,10,100,11,91,0.041195860250903577,0.19418377920641905

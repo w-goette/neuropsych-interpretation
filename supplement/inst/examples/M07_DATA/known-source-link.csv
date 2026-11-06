@@ -1,0 +1,2 @@
+intercept,slope,confidence_lower,confidence_upper,untruncated_A_variance,untruncated_B_variance,positive_slope_probability,lower,upper,posterior_mean_B,posterior_variance_B,independent_source_target_mean,independent_source_target_variance
+10,2,9.342867561893591,12.657132438106409,0.33222591362126247,0.4444444444444444,0.9986501019683699,9.700128583127405,12.305398166855229,2.002958559361417,0.43851857264811517,11.001479279680709,1.5544459475751111

@@ -1,6 +1,38 @@
+# Verify that the complete companion source and teaching data were transferred.
+check_companion_files <- function(project) {
+  inventory <- file.path(project, "FILES.md5")
+  if (!file.exists(inventory)) {
+    stop("Companion file inventory is missing. Transfer the complete supplement folder.", call. = FALSE)
+  }
+  entries <- readLines(inventory, warn = FALSE)
+  entries <- entries[nzchar(entries)]
+  if (!length(entries) || any(!grepl("^[0-9a-f]{32}  .+", entries))) {
+    stop("Invalid companion file inventory. Transfer the complete supplement folder.", call. = FALSE)
+  }
+  expected <- substr(entries, 1L, 32L)
+  paths <- substring(entries, 35L)
+  if (any(grepl("^/|(^|/)\\.\\.(/|$)", paths))) stop("Invalid inventory path.", call. = FALSE)
+  full_paths <- file.path(project, paths)
+  missing <- paths[!file.exists(full_paths)]
+  if (length(missing)) {
+    stop(paste(c(paste(length(missing), "companion files are missing. Transfer the complete supplement folder:"),
+                 head(missing, 20L)), collapse = "\n"), call. = FALSE)
+  }
+  actual <- unname(tools::md5sum(full_paths))
+  changed <- paths[is.na(actual) | actual != expected]
+  if (length(changed)) {
+    stop(paste(c("Companion files differ from the supplied inventory:", head(changed, 20L),
+                 "Transfer the complete supplement folder, or regenerate inventories after deliberate source edits."),
+               collapse = "\n"), call. = FALSE)
+  }
+  cat("Verified", length(paths), "companion source and data files.\n")
+  invisible(TRUE)
+}
+
 # Check the recorded packages and the library used by standalone examples.
 check_companion_environment <- function(project) {
   project <- normalizePath(project, mustWork = TRUE)
+  check_companion_files(project)
   project_library <- file.path(project, "renv", "library")
   if (!dir.exists(project_library)) {
     stop("The companion library is missing. Run Rscript --vanilla supplement/restore.R.", call. = FALSE)

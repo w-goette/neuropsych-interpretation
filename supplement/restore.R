@@ -4,6 +4,8 @@ argument <- grep("^--file=", commandArgs(FALSE), value = TRUE)
 file <- sub("^--file=", "", argument[[1]])
 if (!file.exists(file)) file <- gsub("~+~", " ", file, fixed = TRUE)
 project <- dirname(normalizePath(file, mustWork = TRUE))
+source(file.path(project, "check_environment.R"))
+check_companion_files(project)
 Sys.setenv(RENV_PATHS_ROOT = file.path(project, "renv", "state"),
            RENV_PATHS_CACHE = file.path(project, "renv", "cache"),
            RENV_PATHS_SOURCE = file.path(project, "renv", "source"),

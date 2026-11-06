@@ -1,0 +1,5 @@
+PNG font: Arial
+PNG: ragg::agg_png, white canvas, 200dpi; panels 5.5x4.9 and 5.5x5.8 inches
+Vector EPS: base postscript/Helvetica fallback, same geometry, host metrics can vary.
+Panel B shows all three loss curves and the case loss 1.76 on a y-axis from 0 to 4.
+Deterministic synthetic example; panel-level alternative text accompanies the figure.

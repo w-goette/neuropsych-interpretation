@@ -1,0 +1,3 @@
+population,mean_tau,variance_tau,probability_Y2,variance_Y,average_error_variance,reliability,posterior_positive_tau
+A,0,1,0.5,4,3,0.25,0.75
+B,0,1,0.5,4,3,0.25,0.25

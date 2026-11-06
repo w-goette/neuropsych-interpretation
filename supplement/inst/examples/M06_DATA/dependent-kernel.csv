@@ -1,0 +1,5 @@
+pattern,probability,derivative,information_term
+00,0.3125,-0.1875,0.1125
+01,0.1875,0,0
+10,0.1875,0,0
+11,0.3125,0.1875,0.1125

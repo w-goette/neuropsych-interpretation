@@ -1,0 +1,2 @@
+mean_sensitivity,mean_false_positive,new_positive_predictive,confidence_lower,confidence_upper
+0.75,0.17857142857142858,0.33673469387755106,0.02611575951384736,0.9181082697584153

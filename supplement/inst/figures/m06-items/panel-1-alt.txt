@@ -1,0 +1,1 @@
+Panel A. Three information curves against latent coordinate h from minus5 to6 for fixed two-item logistic responses. Solid full-pattern information is at least dashed total information,which is at least dotted moment bound. Markers at h=0 show approximately.670,.617,.596. All decrease toward zero in distant tails.

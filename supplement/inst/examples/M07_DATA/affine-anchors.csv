@@ -1,0 +1,3 @@
+source_slope,source_difficulty,target_slope,target_difficulty,link_intercept,link_slope
+1,-1,0.5,8,10,2
+1.5,1,0.75,12,10,2

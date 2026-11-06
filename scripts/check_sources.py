@@ -4,8 +4,10 @@ import argparse
 import json
 import re
 from pathlib import Path
+from update_manifest import verify
 
 root = Path(__file__).resolve().parents[1]
+verify(root)
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--require-complete-book', action='store_true')
 parser.add_argument('--github-output', type=Path)

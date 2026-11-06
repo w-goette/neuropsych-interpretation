@@ -1,0 +1,1 @@
+Stage 3. Flag if rank is at most 5%. Inclusive: 10% exceeds 5%, so exclude all 10 people and flag 0% of the population. Midpoint: 5% is at most 5%; strict: 0% is at most 5%; both include all 10 people and flag 10% of the population. Full bars represent 100% of people. No other score category passes.

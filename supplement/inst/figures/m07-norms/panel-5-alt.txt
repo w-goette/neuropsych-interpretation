@@ -1,0 +1,1 @@
+Calibration panel B. Each group's true conditional percentile is converted to a normal quantile. Both reports equal h at every coordinate; a thin dashed line lies exactly on a thicker solid line. Exact coincidence is intentional, with no jitter or fabricated separation. This calibration coexists with different measurement relations in panel A.

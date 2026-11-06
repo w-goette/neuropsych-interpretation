@@ -1,0 +1,3 @@
+current_ratio,first_crossing,actual_stopped_length,stopped_beta_a,stopped_beta_b,record
+9.309090909090905,8,8,9,1,nine successes then failure
+9.309090909090905,NA,10,10,2,failure then nine successes
